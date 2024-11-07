@@ -1,0 +1,260 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Seção principal */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+.typing-animation {
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3.5s steps(15) infinite alternate, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 10em; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Links sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-links i {
+    font-size: 40px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-links i:hover {
+    color: #1da1f2; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilo para a seção de projetos */
+#projetos {
+    padding: 50px 0;
+    background-color: #cac7c7;
+    text-align: center;
+}
+
+.projetos-lista {
+    display: grid; /* Altera para grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cria colunas responsivas */
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 0 auto; /* Centraliza o grid */
+    max-width: 1200px; /* Largura máxima do grid */
+}
+
+.projeto {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Adiciona uma transição suave */
+}
+
+.projeto:hover {
+    background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+}
+
+.projeto img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+.projeto h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+}
+
+.projeto p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.projeto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.projeto a:hover {
+    background-color: #9900b8;
+    transform: scale(1.05);
+}
+
+/* Seções adicionais */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#competencias {
+    background-color: #333;
+    color: #fff;
+}
+/* Estilo para a seção de projetos */
+#projetos h2,
+#competencias h2 {
+    font-size: 3.5em; /* Ajuste o valor para o tamanho desejado */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* Seção de Competências */
+#competencias {
+    padding: 50px 0;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+#competencias h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ff6f61; /* Cor chamativa para o título */
+}
+
+.competencias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.competencia-item {
+    background: linear-gradient(145deg, #333, #444);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.competencia-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.icon {
+    font-size: 3em;
+    color: #00b4ff;
+    margin-bottom: 15px;
+}
+
+.competencia-item h3 {
+    font-size: 1.6em;
+    color: #ff6f61;
+    margin: 15px 0;
+}
+
+.barra-progresso {
+    background-color: #555;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.nivel {
+    background: linear-gradient(90deg, #5501db, #00b4ff);
+    height: 100%;
+    transition: width 0.6s ease;
+}
+
+.introducao {
+    font-size: 1.2em;
+    color: #ddd;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+

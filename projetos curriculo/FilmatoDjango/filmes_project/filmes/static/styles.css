@@ -1,0 +1,117 @@
+/* Definições globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c2c2c; /* Fundo preto */
+    color: #f1c40f; /* Texto amarelo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+h1 {
+    color: #f1c40f;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #f1c40f;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Adicionando sombra e hover */
+a:hover {
+    color: #e67e22;
+    text-decoration: underline;
+}
+
+/* Container */
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 0;
+}
+
+li {
+    background-color: #333333; /* Fundo dos itens de filme */
+    color: #f1c40f; /* Texto amarelo */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li a {
+    color: #f1c40f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+li a:hover {
+    background-color: #f39c12; /* Amarelo mais intenso */
+}
+
+/* Botão de Adicionar Filme */
+a[href*="add_movie"] {
+    background-color: #f1c40f;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+a[href*="add_movie"]:hover {
+    background-color: #e67e22;
+}
+
+/* Ajustes gerais de layout */
+ul {
+    width: 90%;
+    max-width: 900px;
+    margin-top: 30px;
+}
+
+/* Links de Ação (Editar e Deletar) */
+a[href*="edit_movie"] {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a[href*="edit_movie"]:hover {
+    background-color: #e67e22;
+}
+
+a[href*="delete_movie"] {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a[href*="delete_movie"]:hover {
+    background-color: #c0392b;
+}

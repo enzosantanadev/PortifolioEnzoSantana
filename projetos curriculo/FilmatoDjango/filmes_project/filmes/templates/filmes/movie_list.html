@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Filmes</title>
+    <link rel="stylesheet" href="static/styles.css"
+</head>
+<body>
+    <h1>Lista de Filmes</h1>
+    <a href="{% url 'add_movie' %}">Adicionar Filme</a>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <a href="{% url 'movie_detail' movie.pk %}">{{ movie.title }}</a> 
+                - {{ movie.genre }} - {{ movie.year }} - {{ movie.status }} - {{ movie.rating }}
+                <a href="{% url 'edit_movie' movie.pk %}">Editar</a>
+                <a href="{% url 'delete_movie' movie.pk %}">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

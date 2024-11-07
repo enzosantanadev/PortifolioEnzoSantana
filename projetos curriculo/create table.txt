@@ -1,0 +1,12 @@
+CREATE TABLE Raça (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Animal (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    idade INT,
+    raça_id INT,
+    FOREIGN KEY (raça_id) REFERENCES Raça(id)
+);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Filme</title>
+</head>
+<body>
+    <h1>Adicionar Filme</h1>
+
+    <!-- Exibe mensagens de erro ou sucesso -->
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <!-- Formulário de adição de filme -->
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Renderiza o formulário automaticamente em formato de parágrafos -->
+        <button type="submit">Salvar Filme</button>
+    </form>
+</body>
+</html>
